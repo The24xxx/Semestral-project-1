@@ -35,6 +35,18 @@ body {
       }
 
       .active {
-        background-color: #636363;
+        background-color: #4d4c4c;
       }
+
+      input[type="text"] {
+        float: right;
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        font-size: 17px;
+        background-color: #4d4c4c;
+        color: white;
+      }
+      
 }
