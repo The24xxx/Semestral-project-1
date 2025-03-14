@@ -59,47 +59,47 @@ body {
     height: 38vh;
     margin-top: 5%;
     flex-direction: column;
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 70vw;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .header-text {
+        color: white;
+        text-align: right;
+        margin-top: 8%;
+    }
+    
+    .header-text h1 {
+        font-size: 3.5vw;
+        margin-bottom: 2vh;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        width: 100%;
+    }
+    
+    .index-header {
+      width: 100%;
+      height: auto;
+      margin-left: 4vw; /* Add space between the image and text */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .index-header img {
+      width: 42vw;        /* Obrázek vyplní dostupný prostor */
+      height: auto;      /* Zachová poměr stran */
+      object-fit: contain;
+    
+    }
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 70vw;
-    width: 100%;
-    padding: 20px;
-}
-
-.header-text {
-    color: white;
-    text-align: right;
-    margin-top: 8%;
-}
-
-.header-text h1 {
-    font-size: 3.5vw;
-    margin-bottom: 2vh;
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-    width: 100%;
-}
-
-.index-header {
-  width: 100%;
-  height: auto;
-  margin-left: 4vw; /* Add space between the image and text */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.index-header img {
-  width: 42vw;        /* Obrázek vyplní dostupný prostor */
-  height: auto;      /* Zachová poměr stran */
-  object-fit: contain;
-
-}
 
 .button {
     background-color: black;
@@ -146,6 +146,7 @@ body {
 }
 .text-box h2 {
     font-size: 2.5vw;
+    color: white;
     margin-bottom: 2vh;
     white-space: nowrap;
     overflow: hidden;
