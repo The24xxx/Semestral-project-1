@@ -18,6 +18,7 @@ body {
         position: fixed;
         top: 0;
         width: 100%;
+        z-index: 1000;
     }
     
     li {
@@ -43,6 +44,7 @@ body {
 
     input[type="text"] {
         float: right;
+        max-width: 15vw;
         padding: 6px;
         border: none;
         margin-top: 8px;
@@ -164,6 +166,7 @@ body {
         align-items: right;
         margin-left: 40%;
         margin-top: 10%;
+        line-height: 170%;
     }
 
     .img-box {
@@ -184,45 +187,58 @@ body {
     }
 }
 
-.card-heading {
-    margin-left: 5%;
-    margin-top: 5%;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-size: 3vw;
 
-}
 .card-box {
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: stretch; /* Zarovná karty na stejnou výšku */
     border: 0.1px solid white;
     border-radius: 12px;
     margin: 2%;
-    flex-wrap: wrap;    
-    gap: 1em; /* Mezera mezi kartami */
-}
-
-.card {
-    flex: 1 1 calc(30% - 2em); /* Každá karta zabere cca 30 % šířky, zohledňuje okraje */
-    margin: 5%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 50%; /* Všechny karty mají stejnou výšku */
-    min-width: 250px; /* Pokud se šířka zmenší pod tuto hodnotu, karta spadne na další řádek */
-    padding: 2%;
-    border-radius: 12px;
-    border: 0.1px dotted white;
-    min-height: min-content;
-}
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: center;  
 
-.card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
+
+    .card-heading {
+        margin-left: 7%;
+        margin-top: 5%;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-size: 3vw;
+    }
+
+    .card {
+        align-items: center;
+        padding: 2%;
+        margin: 2%;
+        border-radius: 12px;
+        border: 0.1px dashed white;
+        width: 23vw;
+        line-height: 1.7;
+        max-width: 300px;
+        text-align: center;
+        position: relative;
+        min-width: 200px;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        margin-top: 5%;
+    }
+    .button {
+        font-size: 1.1vw;
+        padding: 10px 20px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 50px 50px 0 0;
+        align-self: center;
+        margin-bottom: 0%;
+    }
 }
