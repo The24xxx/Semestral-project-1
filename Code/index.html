@@ -8,23 +8,37 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
 
     </head>
     <body>      
         <script src="" async defer></script>
         <header>
-            <nav class = "navbar">
+            <nav class="navbar">
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms</a></li>
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+              
+                  <li class="dropdown">
+                    <a href="courses.html">Courses  </a>
+                    <ul class="dropdown-content">
+                      <li><a href="course-web.html">Web Development</a></li>
+                      <li><a href="course-hacking.html">Ethical Hacking</a></li>
+                      <li><a href="course-game.html">Game Development</a></li>
+                    </ul>
+                  </li>                  
+              
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="terms.html">Terms</a></li>
+              
+                  <li class="search-form">
                     <form action="/search" method="get">
-                        <input type="text" placeholder="Search...">
+                      <input type="text" placeholder="Search...">
                     </form>
+                  </li>
                 </ul>
             </nav>
             <main class="header">
@@ -36,7 +50,7 @@
 
                     </div>
                     <div class="index-header">
-                        <img src = "I:\OSU\Programko\Semestral-project-1\Images\index_header.jpg" alt = "index_header">
+                        <img src = "Images\index_header.jpg" alt = "index_header">
                     </div>
                 </div>
             </main>
@@ -44,7 +58,7 @@
         
         <div class="flex-container">
             <div class="img-box">
-                <img src = "I:\OSU\Programko\Semestral-project-1\Images\home_page.jpg" alt = "home_page">
+                <img src = "Images\home_page.jpg" alt = "home_page">
         </div>    
             <div class="text-box">
                     <h2>Become IT professional from your own home</h2>
@@ -53,28 +67,59 @@
                         build your portfolio, and transform your passion into a thriving career. Your future in tech starts here — are you ready to seize it?</p>
             </div>
         </div>
-        <h2 class="card-heading">So, who do you want to become?</h2>
-        <div class="card-box">           
-            <div class="card">
-                <img src="I:\OSU\Programko\Semestral-project-1\Images\web.png" alt="web">
-                <h2>Web Wizard</h2>
-                <p>Learn web development by building your own portfolio, creating interactive websites, and mastering essential technologies like HTML, CSS, and JavaScript.</p>
-                <div class="bottom"><button class="button" onclick="location.href='courses.html'">Learn more</button></div>
+        <h2 class="card-heading">So, who do you want to be?</h2>
+        <div class="card-box">
+          <div class="card">
+            <img src="Images/web.png" alt="web">
+            <div class="card-content">
+              <h2>Web Wizard</h2>
+              <p>Learn web development by building your own portfolio, creating interactive websites, and mastering essential technologies like HTML, CSS, and JavaScript.</p>
             </div>
-            <div class="card">
-                <img src="I:\OSU\Programko\Semestral-project-1\Images\hacker.png" alt="web">
-                <h2>Ethical Hacker</h2>
-                <p>Master ethical hacking by exploring cybersecurity principles, testing system vulnerabilities, and using tools like Kali Linux, penetration testing techniques, and real-world scenarios.</p>
-                <div class="bottom"><button class="button" onclick="location.href='courses.html'">Learn more</button></div>
+            <div class="bottom">
+              <button class="button" onclick="location.href='courses.html'">Learn more</button>
             </div>
-            <div class="card">
-                <img src="I:\OSU\Programko\Semestral-project-1\Images\game.png" alt="web">
-                <h2>Game Master</h2>
-                <p>Become a game developer by designing immersive worlds, coding engaging mechanics, and bringing your creative ideas to life with engines like Unity or Unreal Engine.</p>
-                <div class="bottom"><button class="button" onclick="location.href='courses.html'">Learn more</button></div>
+          </div>
+        
+          <div class="card">
+            <img src="Images/hacker.png" alt="hacker">
+            <div class="card-content">
+              <h2>Ethical Hacker</h2>
+              <p>Master ethical hacking by exploring cybersecurity principles, testing system vulnerabilities, and using tools like Kali Linux, penetration testing techniques, and real-world scenarios.</p>
             </div>
+            <div class="bottom">
+              <button class="button" onclick="location.href='courses.html'">Learn more</button>
+            </div>
+          </div>
+        
+          <div class="card">
+            <img src="Images/game.png" alt="game">
+            <div class="card-content">
+              <h2>Game Master</h2>
+              <p>Become a game developer by designing immersive worlds, coding engaging mechanics, and bringing your creative ideas to life with engines like Unity or Unreal Engine.</p>
+            </div>
+            <div class="bottom">
+              <button class="button" onclick="location.href='courses.html'">Learn more</button>
+            </div>
+          </div>
         </div>
+        
+        <footer>
+            <div class="footer-container">
+                <p>Let's stay in touch.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.x.com/"><i class="fa-brands fa-x"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="footer-bottom">
+                    <p>Copyright &copy;2025; Designed by <span class="designer">The24xxx</span></p>
+                </div>
+
+ 
+
+        </footer>
+    
     </body>
-    <footer>
-    </footer>
+
 </html>
