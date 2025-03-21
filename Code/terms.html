@@ -8,23 +8,39 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     </head>
     <body>      
         <script src="" async defer></script>
         <header>
-            <nav class = "navbar">
+            <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li class="active"><a href="terms.html">Terms</a></li>
-                    <input type="text" placeholder="Search..">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+              
+                  <li class="dropdown">
+                    <a href="courses.html">Courses  </a>
+                    <ul class="dropdown-content">
+                      <li><a href="course-web.html">Web Development</a></li>
+                      <li><a href="course-hacking.html">Ethical Hacking</a></li>
+                      <li><a href="course-game.html">Game Development</a></li>
+                    </ul>
+                  </li>                  
+              
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li class="active"><a href="terms.html">Terms</a></li>
+              
+                  <li class="search-form">
+                    <form action="/search" method="get">
+                      <input type="text" placeholder="Search...">
+                    </form>
+                  </li>
                 </ul>
             </nav>
-
         </header>
     </body>
 </html>
