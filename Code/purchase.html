@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+
+
+
+</head>
+<body>
+
+  <div class="form-box" id="form-section">
+    <h2>Enroll In!</h2>
+    <form id="purchaseForm">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" required>
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <button type="submit">Generate Payment QR</button>
+    </form>
+  </div>
+
+  <div class="confirmation-box" id="confirmation" style="display: none;">
+    <h2>Payment Pending</h2>
+    <p>Scan the QR code below to simulate payment:</p>
+    <div id="qrcode"></div>
+    <button onclick="verifyPayment()">Check Payment Status</button>
+  </div>
+
+  <div class="confirmation-box" id="success" style="display: none;">
+    <h2>✅ Payment Successful</h2>
+    <p>Thank you for enrolling! You'll receive further info via email.</p>
+  </div>
+
+  <script>
+    const form = document.getElementById("purchaseForm");
+    const formSection = document.getElementById("form-section");
+    const confirmation = document.getElementById("confirmation");
+    const success = document.getElementById("success");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      formSection.style.display = "none";
+      confirmation.style.display = "block";
+
+      const fullName = document.getElementById("fname").value + " " + document.getElementById("lname").value;
+      const email = document.getElementById("email").value;
+      const paymentData = `Name: ${fullName}\nEmail: ${email}\nAmount: $199`;
+
+      const qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: paymentData,
+        width: 200,
+        height: 200,
+        colorDark: "#ffffff",
+        colorLight: "#111111",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    });
+
+    function verifyPayment() {
+      confirmation.style.display = "none";
+      success.style.display = "block";
+    }
+  </script>
+</body>
+</html>

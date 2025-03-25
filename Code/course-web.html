@@ -35,12 +35,76 @@
                   <li><a href="terms.html">Terms</a></li>
               
                   <li class="search-form">
-                    <form action="/search" method="get">
-                      <input type="text" placeholder="Search...">
-                    </form>
+                    <input type="text" id="searchInput" placeholder="Search...">
                   </li>
                 </ul>
             </nav>
         </header>
+        <main>
+          <section class="game-hero" style="background-image: url('Images/web_header.jpg');">
+            <h1>Become a Web Developer</h1>
+            <p class="game-subtitle">Learn to build modern websites and apps from scratch</p>
+          </section>
+    
+          <section class="course-intro">
+            <p>Whether you're just starting out or looking to level up, our web development course provides the tools and knowledge to build real-world websites. From HTML and CSS to JavaScript and frameworks like React, you'll get hands-on experience creating responsive, user-friendly designs.</p>
+    
+            <p>You'll also learn best practices for accessibility, performance, and SEO, plus how to publish your website and make it available to the world.</p>
+    
+            <p>No previous experience required. Just bring your curiosity and we'll help you turn it into code.</p>
+          </section>
+    
+          <section class="course-learn">
+            <h2>What You Will Learn</h2>
+            <ul>
+              <li>🌐 HTML5, CSS3 and responsive layouts</li>
+              <li>🧠 JavaScript basics and DOM manipulation</li>
+              <li>⚛️ Introduction to React and component-based design</li>
+              <li>📱 Mobile-first design and accessibility</li>
+              <li>🚀 Hosting and deploying your website</li>
+            </ul>
+          </section>
+    
+          <section class="course-cta">
+            <h2>Start your journey as a web developer</h2>
+            <a href="gallery.html" class="button">See Web Projects</a>
+          </section>
+        </main>
+        <footer>
+          <div class="footer-container">
+              <p>Let's stay in touch.</p>
+              <div class="social-icons">
+                  <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.x.com/"><i class="fa-brands fa-x"></i></a>
+                  <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+              <div class="footer-bottom">
+                  <p>Copyright &copy;2025; Designed by <span class="designer">The24xxx</span></p>
+              </div>
+      </footer>
+            <!-- JavaScript: hledání v textu a nadpisech -->
+            <script>
+              document.getElementById("searchInput").addEventListener("input", function () {
+                const query = this.value.toLowerCase();
+      
+                // Všechny elementy, ve kterých bude hledání
+                const searchableElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+      
+                searchableElements.forEach(el => {
+                  const text = el.textContent;
+                  const lowerText = text.toLowerCase();
+      
+                  if (query && lowerText.includes(query)) {
+                    // Zvýraznění hledaného výrazu
+                    const regex = new RegExp(`(${query})`, "gi");
+                    el.innerHTML = text.replace(regex, '<mark>$1</mark>');
+                  } else {
+                    // Obnovení původního textu
+                    el.innerHTML = el.textContent;
+                  }
+                });
+              });
+            </script> 
     </body>
 </html>

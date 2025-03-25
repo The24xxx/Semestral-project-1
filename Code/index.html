@@ -35,9 +35,7 @@
                   <li><a href="terms.html">Terms</a></li>
               
                   <li class="search-form">
-                    <form action="/search" method="get">
-                      <input type="text" placeholder="Search...">
-                    </form>
+                    <input type="text" id="searchInput" placeholder="Search...">
                   </li>
                 </ul>
             </nav>
@@ -76,7 +74,7 @@
               <p>Learn web development by building your own portfolio, creating interactive websites, and mastering essential technologies like HTML, CSS, and JavaScript.</p>
             </div>
             <div class="bottom">
-              <button class="button" onclick="location.href='courses.html'">Learn more</button>
+              <button class="button" onclick="location.href='course-web.html'">Learn more</button>
             </div>
           </div>
         
@@ -87,7 +85,7 @@
               <p>Master ethical hacking by exploring cybersecurity principles, testing system vulnerabilities, and using tools like Kali Linux, penetration testing techniques, and real-world scenarios.</p>
             </div>
             <div class="bottom">
-              <button class="button" onclick="location.href='courses.html'">Learn more</button>
+              <button class="button" onclick="location.href='course-hacking.html'">Learn more</button>
             </div>
           </div>
         
@@ -98,7 +96,7 @@
               <p>Become a game developer by designing immersive worlds, coding engaging mechanics, and bringing your creative ideas to life with engines like Unity or Unreal Engine.</p>
             </div>
             <div class="bottom">
-              <button class="button" onclick="location.href='courses.html'">Learn more</button>
+              <button class="button" onclick="location.href='course-game.html'">Learn more</button>
             </div>
           </div>
         </div>
@@ -116,7 +114,29 @@
                     <p>Copyright &copy;2025; Designed by <span class="designer">The24xxx</span></p>
                 </div>
         </footer>
-    
+    <!-- JavaScript: hledání v textu a nadpisech -->
+      <script>
+        document.getElementById("searchInput").addEventListener("input", function () {
+          const query = this.value.toLowerCase();
+
+          // Všechny elementy, ve kterých bude hledání
+          const searchableElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+
+          searchableElements.forEach(el => {
+            const text = el.textContent;
+            const lowerText = text.toLowerCase();
+
+            if (query && lowerText.includes(query)) {
+              // Zvýraznění hledaného výrazu
+              const regex = new RegExp(`(${query})`, "gi");
+              el.innerHTML = text.replace(regex, '<mark>$1</mark>');
+            } else {
+              // Obnovení původního textu
+              el.innerHTML = el.textContent;
+            }
+          });
+        });
+      </script>
     </body>
 
 </html>

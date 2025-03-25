@@ -35,12 +35,33 @@
                   <li><a href="terms.html">Terms</a></li>
               
                   <li class="search-form">
-                    <form action="/search" method="get">
-                      <input type="text" placeholder="Search...">
-                    </form>
+                    <input type="text" id="searchInput" placeholder="Search...">
                   </li>
                 </ul>
             </nav>
         </header>
-    </body>
+          <!-- JavaScript: hledání v textu a nadpisech -->
+          <script>
+            document.getElementById("searchInput").addEventListener("input", function () {
+              const query = this.value.toLowerCase();
+    
+              // Všechny elementy, ve kterých bude hledání
+              const searchableElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+    
+              searchableElements.forEach(el => {
+                const text = el.textContent;
+                const lowerText = text.toLowerCase();
+    
+                if (query && lowerText.includes(query)) {
+                  // Zvýraznění hledaného výrazu
+                  const regex = new RegExp(`(${query})`, "gi");
+                  el.innerHTML = text.replace(regex, '<mark>$1</mark>');
+                } else {
+                  // Obnovení původního textu
+                  el.innerHTML = el.textContent;
+                }
+              });
+            });
+          </script> 
+      </body>
 </html>

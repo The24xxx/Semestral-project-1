@@ -737,3 +737,274 @@ figure.gallery-item figcaption {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
+.courses-title {
+  font-size: 3vw;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+}
+
+.courses-intro {
+  margin: 3% 10%;
+  padding: 2%;
+  text-align: justify;
+  line-height: 1.7;
+  color: #ddd;
+  animation: fadeInUp 1.4s ease-out forwards;
+  transform: translateY(20px);
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.courses-gallery-cta {
+  margin: 4% 10%;
+  padding-left: 1.5rem;
+  border-left: 2px solid white;
+  text-align: left;
+  max-width: 600px;
+  animation: fadeInLeft 1.4s ease-out forwards;
+  transform: translateX(-30px);
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.courses-gallery-cta p {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+@keyframes fadeInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* === GAME DEVELOPMENT COURSE PAGE === */
+.game-hero {
+  position: relative;
+  background: url("Images/game_header.jpg") center/cover no-repeat;
+  color: white;
+  padding: 5% 10%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.game-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Tmavý overlay */
+  z-index: 0;
+}
+
+.game-hero h1,
+.game-hero p {
+  position: relative;
+  z-index: 1;
+}
+
+
+.game-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.game-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ccc;
+}
+
+.course-intro {
+  margin: 4% 15%;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-delay: 0.6s;
+  text-align: justify;
+}
+
+.course-learn {
+  margin: 4% 15%;
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-delay: 0.9s;
+}
+
+.course-learn h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.course-learn ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.course-learn li {
+  padding-left: 1.2em;
+  margin-bottom: 0.7em;
+  position: relative;
+}
+
+.course-cta {
+  text-align: center;
+  margin: 5% 0;
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-delay: 1.2s;
+}
+
+.course-cta .button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.8em 2em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.course-cta .button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Animace */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === FAQ SECTION === */
+.faq-section {
+  padding: 5% 10%;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.faq-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.faq-item h2 {
+  font-size: 1.2rem;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.faq-item h2::after {
+  content: '\f078';
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active h2::after {
+  transform: rotate(180deg);
+}
+
+.faq-item p {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+  margin-top: 0.5rem;
+}
+
+.faq-item.active p {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*search mark*/
+mark {
+  background-color: #ccc;
+  color: black;
+  font-weight: bold;
+}
+.form-box, .confirmation-box {
+  background: #222;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#qrcode {
+  margin: 1rem auto;
+  width: fit-content;
+}

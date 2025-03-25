@@ -35,12 +35,120 @@
                   <li><a href="terms.html">Terms</a></li>
               
                   <li class="search-form">
-                    <form action="/search" method="get">
-                      <input type="text" placeholder="Search...">
-                    </form>
+                    <input type="text" id="searchInput" placeholder="Search...">
                   </li>
                 </ul>
             </nav>
         </header>
+
+        <main>
+          <h1 class="courses-title">Our Courses</h1>
+          <div class="about-header">
+            <img src="Images/courses_header.jpg" alt="Courses Header" />
+            <div class="quote-overlay">
+              <p class="intro-quote">
+                Explore the paths we offer. Whether you're starting out or building on existing skills, our courses are designed to support your growth.
+              </p>
+            </div>
+          </div>
+
+          <section class="courses-section">
+            <h1 class="courses-title">Our Courses</h1>
+            <div class="courses-intro">
+              <p>
+                At XXX Academy, we believe in the power of practical knowledge and hands-on experience. Our courses are designed not only to teach theory, but to give you real-world skills that you can use immediately — whether you're aiming to build your first website, secure networks, or create your own video game.
+              </p>
+              <p>
+                Each course is led by experienced mentors who guide you step by step, with interactive projects and a strong focus on creativity, problem-solving, and collaboration. Whether you're a total beginner or already have some experience, we’ll help you take your skills to the next level.
+              </p>
+              <p>
+                Explore our most popular paths below, and don’t hesitate to reach out if you're not sure where to start. Your journey into the world of tech begins here.
+              </p>
+            </div>
+
+            <div class="courses-gallery-cta">
+              <p>Want to see what our students have created? Explore our <strong>Gallery</strong> full of projects, workshops, and moments from our classes!</p>
+              <a href="gallery.html" class="button">Visit Gallery</a>
+            </div>
+            
+          </section>
+          
+          <h2 class="card-heading">So, who do you want to become?</h2>
+          <div class="card-box">
+            <div class="card">
+              <img src="Images/web.png" alt="web">
+              <div class="card-content">
+                <h2>Web Wizard</h2>
+                <p>Learn web development by building your own portfolio, creating interactive websites, and mastering essential technologies like HTML, CSS, and JavaScript.</p>
+              </div>
+              <div class="bottom">
+                <button class="button" onclick="location.href='course-web.html'">Learn more</button>
+              </div>
+            </div>
+          
+            <div class="card">
+              <img src="Images/hacker.png" alt="hacker">
+              <div class="card-content">
+                <h2>Ethical Hacker</h2>
+                <p>Master ethical hacking by exploring cybersecurity principles, testing system vulnerabilities, and using tools like Kali Linux, penetration testing techniques, and real-world scenarios.</p>
+              </div>
+              <div class="bottom">
+                <button class="button" onclick="location.href='course-hacking.html'">Learn more</button>
+              </div>
+            </div>
+          
+            <div class="card">
+              <img src="Images/game.png" alt="game">
+              <div class="card-content">
+                <h2>Game Master</h2>
+                <p>Become a game developer by designing immersive worlds, coding engaging mechanics, and bringing your creative ideas to life with engines like Unity or Unreal Engine.</p>
+              </div>
+              <div class="bottom">
+                <button class="button" onclick="location.href='course-game.html'">Learn more</button>
+              </div>
+            </div>
+          </div>
+
+
+    
+
+        </main>
+
+        <footer>
+          <div class="footer-container">
+              <p>Let's stay in touch.</p>
+              <div class="social-icons">
+                  <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.x.com/"><i class="fa-brands fa-x"></i></a>
+                  <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+              <div class="footer-bottom">
+                  <p>Copyright &copy;2025; Designed by <span class="designer">The24xxx</span></p>
+              </div>
+      </footer>
+            <!-- JavaScript: hledání v textu a nadpisech -->
+            <script>
+              document.getElementById("searchInput").addEventListener("input", function () {
+                const query = this.value.toLowerCase();
+      
+                // Všechny elementy, ve kterých bude hledání
+                const searchableElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+      
+                searchableElements.forEach(el => {
+                  const text = el.textContent;
+                  const lowerText = text.toLowerCase();
+      
+                  if (query && lowerText.includes(query)) {
+                    // Zvýraznění hledaného výrazu
+                    const regex = new RegExp(`(${query})`, "gi");
+                    el.innerHTML = text.replace(regex, '<mark>$1</mark>');
+                  } else {
+                    // Obnovení původního textu
+                    el.innerHTML = el.textContent;
+                  }
+                });
+              });
+            </script> 
     </body>
 </html>
