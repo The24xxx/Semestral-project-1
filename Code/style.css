@@ -887,6 +887,20 @@ figure.gallery-item figcaption {
   background-color: white;
   color: black;
 }
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.or-text {
+  font-size: 1rem;
+  color: white;
+  opacity: 0.7;
+}
 
 /* Animace */
 @keyframes fadeInUp {
@@ -899,7 +913,7 @@ figure.gallery-item figcaption {
 /* === FAQ SECTION === */
 .faq-section {
   padding: 5% 10%;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   animation: fadeInUp 0.8s ease-out;
 }
@@ -915,6 +929,7 @@ figure.gallery-item figcaption {
   padding: 1rem 0;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 30px;
 }
 
 .faq-item:hover {
@@ -1007,4 +1022,8 @@ button {
 #qrcode {
   margin: 1rem auto;
   width: fit-content;
+}
+button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }

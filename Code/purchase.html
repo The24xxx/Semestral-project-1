@@ -34,7 +34,8 @@
   <div class="confirmation-box" id="confirmation" style="display: none;">
     <h2>Payment Pending</h2>
     <p>Scan the QR code below to simulate payment:</p>
-    <div id="qrcode"></div>
+    <img id="qrcodeImage" src="Images/qr.jpg" alt="QR Code" style="margin: 1rem auto; display: block; width: 200px;">
+    <p>Once you've scanned the code, click the button below to verify your payment.</p>
     <button onclick="verifyPayment()">Check Payment Status</button>
   </div>
 
@@ -57,15 +58,6 @@
       const fullName = document.getElementById("fname").value + " " + document.getElementById("lname").value;
       const email = document.getElementById("email").value;
       const paymentData = `Name: ${fullName}\nEmail: ${email}\nAmount: $199`;
-
-      const qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: paymentData,
-        width: 200,
-        height: 200,
-        colorDark: "#ffffff",
-        colorLight: "#111111",
-        correctLevel: QRCode.CorrectLevel.H
-      });
     });
 
     function verifyPayment() {
@@ -75,3 +67,4 @@
   </script>
 </body>
 </html>
+
