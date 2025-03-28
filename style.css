@@ -1023,7 +1023,7 @@ button {
   font-weight: 300;
 }
 
-#qrcode {
+.qrcode {
   margin: 1rem auto;
   width: fit-content;
 }
